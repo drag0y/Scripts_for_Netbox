@@ -1,0 +1,11 @@
+[
+  {
+    "hostname": "TEST_SCRIPT",
+    "interface": "vlan4090",
+    "ipaddress": "192.168.1.2/24",
+    "mac_address": "22:11:77:88:dd:cc",
+    "model": "DGS-3120-24SC",
+    "siteslug": "test_site",
+    "swroleslug": "access-switch"
+  }
+]
