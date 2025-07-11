@@ -88,7 +88,7 @@ class NbPostDevice:
 
 
     def postmac(self, int_id):
-        POSTIP = f"{URLNB}/api/dcim/mac-addresses/"
+        POSTMAC = f"{URLNB}/api/dcim/mac-addresses/"
 
         mac_add = {
             "mac_address": self.mac_address,
@@ -96,7 +96,7 @@ class NbPostDevice:
             "assigned_object_id": int(int_id)
         }
 
-        response = requests.post(POSTIP, headers=HEADERS, verify=False, json=mac_add)
+        response = requests.post(POSTMAC, headers=HEADERS, verify=False, json=mac_add)
 
         return response.status_code
 
@@ -115,7 +115,7 @@ class NbPostDevice:
         return response.status_code
 
     def postmainmac(self, int_id):
-        POSTMAINIP = f"{URLNB}/api/dcim/interfaces/{int_id}/"
+        POSTMAINMAC = f"{URLNB}/api/dcim/interfaces/{int_id}/"
 
         main_mac = {
             "primary_mac_address": {
@@ -123,7 +123,7 @@ class NbPostDevice:
             }
         }
 
-        response = requests.patch(POSTMAINIP, headers=HEADERS, verify=False, json=main_mac)
+        response = requests.patch(POSTMAINMAC, headers=HEADERS, verify=False, json=main_mac)
 
         return response.status_code
 
